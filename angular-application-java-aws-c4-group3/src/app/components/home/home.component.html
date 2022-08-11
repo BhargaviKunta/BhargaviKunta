@@ -1,0 +1,160 @@
+<div class="d-flex justify-content-around m-5">
+  <ng-container *ngFor="let cat of catagory">
+    <span>
+    
+    
+    <h5 class="mb-2"><strong>{{cat.name}}</strong></h5>
+    <p class="text-muted ">{{cat.description}}<span class="badge bg-primary">NEW</span></p>
+    </span>
+  </ng-container>
+    </div>
+   
+    <section class="pt-5 pb-5" >
+    <h1 class="text-center bg-warning"><marquee loop="10" style="text-shadow:4px 4px 8px red" scrollmount = "5">New Products</marquee></h1>
+    <div class="row">
+    <div class="card-group p-2 d-flex" style="width:25%;"  *ngFor="let data of product">
+      
+  <div class="card m-3" style="width: 18rem;" >
+      <img src={{data.imgurl}} class="card-img-top" height="200">
+      <div class="card-body">
+        <h5 class="card-title">{{data.name}} </h5>
+        <p class="card-text">{{data.description}}</p>
+        <a href="#" class="btn btn-primary m-3">Buy Now</a><a [routerLink]="['/signup',data.id]"  class="btn btn-warning" (click)="addToCart(data)" >Add to cart</a>
+      </div>
+    </div>
+    
+  </div>
+    
+    
+    
+    </div>
+    </section>
+    <section class=" pt-5 pb-5">
+    <h1 class="text-center bg-warning">Top Selling</h1>
+    
+    
+    <div class="card-group p-2 ps-5 pe-5">
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/budha.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Buddha Figurine  </h5>
+          <p class="card-text">Buddha figurine to add an artistic flair to homes</p>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a><a href="#" class="btn btn-warning">Add to cart</a>
+        </div>
+      </div>
+      
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/clock1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Corsica clock</h5>
+          <p class="card-text"> Antique Wall Clock comes in round shape</p>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a><a href="#" class="btn btn-warning">Add to cart</a>
+        </div>
+      </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/bell1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fiesta Bell </h5>
+          <p class="card-text">Give your entryway stylish update with this bell.</p>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a><a href="#" class="btn btn-warning">Add to cart</a>
+        </div>
+      </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/mirror1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Corsica Mirror </h5>
+          <p class="card-text">Comes with set of three mirrors with wall mount</p>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a><a href="#" class="btn btn-warning">Add to cart</a>
+        </div>
+      </div>
+      <div class="card m-2 " style="width: 18rem;">
+        <img src="/assets/img/plant1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Valencia planter </h5>
+          <p class="card-text">Valencia Gold Solid Metal Planter With Stand</p>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a><a href="#" class="btn btn-warning">Add to cart</a>
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <section class="container-fluid">
+      <div class="row">
+        <div class="w-100  p-0"><h2 style="height: 100%;" class="p-2 d-inline-block w-50 text-center bg-info"><marquee loop="10" style="text-shadow:4px 4px 8px red" scrollmount = "5">Deal of the day</marquee></h2>
+          <h2 style="height: 100%;" class="w-50 d-inline-block text-center p-2 bg-info">
+            <marquee loop="10" style="text-shadow:4px 4px 8px red" scrollmount = "5">Offers for you</marquee>
+            </h2></div>
+       
+    
+    
+      <div class="col-6 d-flex justify-content-around flex-wrap bg-warning p-3">   
+        
+      
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/candle1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Galaxy Glass Candle Holder </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+      
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/holder1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mayur Votive Holder </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+     
+        <div class="card m-2" style="width: 18rem;">
+          <img src="/assets/img/taper1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Taper Candles </h5>
+            <a href="#" class="btn btn-primary m-3">Buy Now</a>
+          </div>
+        </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/burner1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Adrian Oil Burner </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+      
+    </div>
+        
+    
+    
+    
+    <div class="col-6 d-flex justify-content-around flex-wrap bg-secondary p-3">
+ <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/lamp1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Eternity Table Lamp </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/lamp2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fiesta Table Lamp </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="/assets/img/vase1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Corsica Glass Vase </h5>
+            <a href="#" class="btn btn-primary m-3">Buy Now</a>
+          </div>
+        </div>
+      <div class="card m-2" style="width: 18rem;">
+        <img src="/assets/img/plate1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Austin leaf Platter </h5>
+          <a href="#" class="btn btn-primary m-3">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>

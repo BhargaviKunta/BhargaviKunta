@@ -1,0 +1,68 @@
+<div class="container" style="min-height:300px;">
+    <div class="row w-75 m-auto pt-5">
+<form #userform="ngForm" class="d-flex" (ngSubmit)="onSubmit(userform.value)">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" ngModel name="search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</div> 
+  
+
+
+<div class="row d-flex justify-content-center my-4" *ngIf="products.length!=0">
+  <div class="col-md-8">
+    <div class="card mb-4">
+ 
+      <div class="card-body">
+        <ng-container *ngFor="let item of products">
+      
+        <div class="row">
+          <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+           
+            <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+              <img src={{item.imgurl}}
+                class="w-100" alt="Blue Jeans Jacket" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+              </a>
+            </div>
+           
+          </div>
+
+          <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+           
+            <p><strong>{{item.name}}</strong></p>
+            <p>{{item.description}}</p>
+         
+            
+          
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+           
+
+           
+            <p class="text-start text-md-center">
+              <strong>{{item.price}}</strong>
+            </p>
+
+          </div>
+        </div>
+       
+
+        <hr class="my-4" />
+      </ng-container>
+
+     
+
+    
+ 
+
+              
+
+        
+
+  
+
+  
+
+  

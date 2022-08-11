@@ -1,0 +1,24 @@
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info position-sticky top-0" style="z-index:1;box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);">
+  <div class="container-fluid">
+    <a class="navbar-brand " routerLink="/" style="text-shadow:20px 20px 20px #FF0000">ShopForHome</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+      
+      <a [routerLink]="['/coupon']" class="text-white text-decoration-none text-uppercase" style="text-shadow:2px 2px 8px #FF0000;">Coupon</a>
+      <a [routerLink]="['/wish']" class="text-white text-decoration-none text-uppercase" style="text-shadow: 2px 2px #ff0000;">WishList</a>
+     
+      <a [routerLink]="['/cart']" class="text-white text-decoration-none text-uppercase" style="text-shadow: 2px 2px #ff0000;">Cart  </a>
+      
+
+    <a [routerLink]="['/cart']" *ngIf="islogin" class="text-white text-decoration-none"><i style="color:white;font-size:1.5em;margin-right:15px;" class="fa-solid fa-user-check"></i>{{username}}
+    </a>
+    <button (click)="logout()" *ngIf="islogin" class="btn btn-danger me-5"><i style="color:white;font-size:0.8em;margin-right:8px;"  class="fa-solid fa-power-off"></i>Logout</button>
+    <button [routerLink]="['/login']" *ngIf="!islogin" class="btn btn-warning me-5"><h4 style="text-shadow: 2px 2px #ff0000;">Login</h4></button>
+    <a [routerLink]="['/search']" class="btn btn-info"><i class="pe-1 fa-brands fa-searchengin"></i>Search</a>
+    
+    </div>
+  
+</nav>

@@ -1,0 +1,68 @@
+<section class="container p-2">
+    <div class="row">
+      <div class="col">
+        <form class="w-100 m-auto bg-warning p-5">
+          <h2 class="text-center h2">Add Product</h2>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Product Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Product Description</label>
+            <textarea  class="form-control" id="exampleInputPassword1">
+              </textarea>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Price</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Quantity</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Category</label>
+              <select id="" class="form-select">
+                <option>Select Category</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Select image</label>
+              <input type="file" class="form-control" id="exampleInputPassword1">
+            </div>
+      
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+    
+      </div>
+      <div class="col">
+        <form class="w-75 m-auto">
+    
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Upload CSV</label>
+              <input type="file" class="form-control" id="exampleInputPassword1" (change)="selectFile($event)"/>
+            </div>
+            <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+      </form>
+
+
+      <div *ngIf="currentFile" class="progress my-3">
+        <div
+          class="progress-bar progress-bar-info progress-bar-striped"
+          role="progressbar"
+          attr.aria-valuenow="{{ progress }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [ngStyle]="{ width: progress + '%' }"
+        >
+          {{ progress }}%
+        </div>
+      </div>
+      <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
+
+      </div>
+    </div>
+    
+      </section>
+     

@@ -1,0 +1,13 @@
+<div class="container d-flex">
+<div *ngFor="let item of items" class="card m-3" style="width: 18rem;border: 1px solid;" >
+  <div class="card-header bg-primary text-center text-light" style="height:150px;padding-top:20%;font-size: 2em;font-weight: bold;">{{item.name}}</div>
+    <div class="card-body p-4">
+        <p class="text-info text-center">your coupon card</p>
+      <h3 class="card-title text-center p-3" style="border:1px dotted rgb(211, 22, 22);">{{item.code}}</h3>
+      <h6 class="pt-3">Type : {{item.type}}</h6>
+      <h6>Value : {{item.percentage}}</h6>
+      <p class="card-text">Detail: {{item.description}}</p>
+      <p class="card-text text-muted">Validity: {{item.expiry}}</p>
+    </div>
+  </div>
+</div>

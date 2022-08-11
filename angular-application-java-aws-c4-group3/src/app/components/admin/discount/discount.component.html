@@ -1,0 +1,81 @@
+<section class="container-fluid mt-5 mb-5">
+    <div class="row ps-3 pe-3">
+      
+<div class="col-8 pe-5 pt-3">
+<h2 class="text-center pb-3">Coupons</h2>
+  <table class="table w-100 m-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Coupon Code</th>
+        <th scope="col">Description</th>
+        <th scope="col">Type</th>
+        <th scope="col">value</th>
+        
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data,let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.code}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.percentage}}</td>
+       
+
+        <td>
+          <a (click)="setdata(item)" class="btn btn-warning">Edit</a>
+          <a (click)="deleteone(item)" class="btn btn-danger">Delete</a>
+        </td>
+        
+      </tr>
+
+      
+      
+    </tbody>
+  </table>
+
+
+</div>
+
+<div class="col-4 bg-info p-4" style="max-height:600px;border-radius:35px">
+  <h2 class="text-center h2 mt-3 mb-3">Add Coupon</h2>
+    
+    <form class="m-auto">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Coupon Code</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="coupon.code" name="code">
+        
+      </div>
+  
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Description</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="coupon.description" name="description">
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Type</label>
+          <select id="" class="form-select" [(ngModel)]="coupon.type" name="type">
+            <option>Percentage</option>
+            <option>Flat</option>
+          </select>
+        </div>
+  
+        <div class="mb-3">
+          <label for="discount_value" class="form-label" >Value</label>
+          <input type="text" class="form-control" id="discount_value" [(ngModel)]="coupon.percentage"  name="percentage">
+        </div>
+
+        
+  
+      <button type="submit" class="btn btn-primary" *ngIf="updatebtn" (click)="edit()">Update</button>
+      <button type="submit" class="btn btn-primary" *ngIf="addbtn" (click)="save()">Add</button>
+    </form>
+  </div>
+
+
+
+
+</div>
+</section>

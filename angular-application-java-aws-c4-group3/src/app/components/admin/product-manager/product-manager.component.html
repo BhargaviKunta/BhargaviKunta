@@ -1,0 +1,43 @@
+
+
+
+<section class="container">
+    <button class="btn btn-success" routerLink="/addproduct">Add Product</button>
+  
+  
+  <!-- Product -->
+  <h2 class="h2 text-center ">Products</h2>
+  <table class="table w-100 m-auto">
+    <thead>
+      <tr class="bg-danger">
+        <th scope="col"><h2>Sales No</h2></th>
+        <th scope="col"><h2>Image</h2></th>
+        <th scope="col"><h2>Product Name</h2></th>
+        <th scope="col"><h2>Description</h2></th>
+        <th scope="col"><h2>Price</h2></th>
+        <th scope="col"><h2>Quantity</h2></th>
+        <!--<th>Action</th>-->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of product, let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.description}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.quantity}}</td>
+        <!--<td>
+          <a href="" class="btn btn-warning">Edit</a>
+          <a (click)="deleteProduct(data)" class="btn btn-danger">Delete</a>
+        </td> -->
+        
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  </section>
+
+
+

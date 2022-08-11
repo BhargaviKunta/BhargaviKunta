@@ -1,0 +1,39 @@
+<section class="container">
+    <button routerLink="/adduser" class="btn btn-outline-secondary" routerLink="/adduser">Add User</button>
+  
+  
+  <!-- Product -->
+  <h2 class="h2 text-center">Users</h2>
+  <table class="table w-100 m-auto bg-light">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Fullname</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Role</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of user, let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{data.firstname}} {{data.lastname}}</td>
+        <td>{{data.username}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.mobile}}</td>
+        <td>{{data.role}}</td>
+        
+        <td>
+          <!--<button (click)="edit()" class="btn btn-warning">Edit</button>-->
+          <button  (click)="deleteone(data)" class="btn btn-danger">Delete</button>
+          <!--<a href="" class="btn btn-outline-secondary">Add Address</a>-->
+        </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  </section>

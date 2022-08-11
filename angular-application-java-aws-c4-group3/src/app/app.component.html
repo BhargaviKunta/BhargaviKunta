@@ -1,0 +1,13 @@
+
+<ng-container *ngIf="isConsumer">
+    <app-navbar ></app-navbar>
+</ng-container>
+<ng-container *ngIf="isAdmin">
+    <app-admin-navbar ></app-admin-navbar>
+</ng-container>
+    <router-outlet></router-outlet>
+    <ng-container *ngIf="isConsumer">
+<app-footer></app-footer>
+
+</ng-container>
+

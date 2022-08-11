@@ -1,0 +1,46 @@
+<section class="container p-2">
+
+    <form class="w-50 m-auto bg-info p-5" style="border-radius:12px">
+      <h2 class="text-center">Add User</h2>
+      <div class="mb-3">
+        <label for="exampleInputEmail136" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail136" aria-describedby="emailHelp" name="firstname" [(ngModel)]="users.firstname">
+        
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail19" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail19" aria-describedby="emailHelp" name="lastname" [(ngModel)]="users.lastname">
+        
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Username</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="email" [(ngModel)]="users.username">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail18" class="form-label">Email Id</label>
+          <input type="email" class="form-control" id="exampleInputEmail18" aria-describedby="emailHelp" name="email" [(ngModel)]="users.email">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword13" class="form-label">Mobile</label>
+          <input type="text" class="form-control" id="exampleInputPassword13" name="mobile" [(ngModel)]="users.mobile">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword12" name="password" [(ngModel)]="users.password">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Role</label>
+          <select id="" class="form-select" name="role" [(ngModel)]="users.role">
+            <option>Admin</option>
+            <option>Consumer</option>
+          </select>
+        </div>
+        
+  
+      <button type="submit" (click)="save()" class="btn btn-warning">Add User</button>
+    </form>
+
+
+
+  </section>
